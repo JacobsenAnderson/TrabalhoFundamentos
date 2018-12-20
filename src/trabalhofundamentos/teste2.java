@@ -10,5 +10,5 @@ package trabalhofundamentos;
  * @author 0150363
  */
 public class teste2 {
-    
+    System.out.println("|Produtor|\t - Estoque esta lotado");
 }
