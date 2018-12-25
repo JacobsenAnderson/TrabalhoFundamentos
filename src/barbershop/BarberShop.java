@@ -15,7 +15,7 @@ int qtdMax = 8;
         Espera listaEspera = new Espera();
         Cliente c1 = new Cliente(listaEspera, "Cliente novo");
         Barbeiro b1 = new Barbeiro(listaEspera, "Anderson");
-        Barbeiro b2 = new Barbeiro(listaEspera, "Carlos");
+        Barbeiro b2 = new Barbeiro(listaEspera, "Renan");
                 
         c1.start();
         b1.start();
