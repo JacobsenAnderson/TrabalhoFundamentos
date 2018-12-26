@@ -19,15 +19,14 @@ public class Barbeiro extends Thread {
     }
     
     public void atender() {
-        synchronized (vagas){
-            if (vagas.getQtdEspera() > 0){
+         synchronized (vagas){
+             if (vagas.getQtdEspera() > 0){
                 int valor = (int)vagas.getVagasLivres();
-                System.out.println("|Barbeiro| - " + this.getName() + "\t - está atendendo cliente: " + valor);
-                
+                System.out.println("|Barbeiro| - " + this.getName() + " - está atendendo cliente: " + valor);                
             }
             else {
                 try {
-                    System.out.println("|Barbeiro| - " + this.getName() + "\t - durmindo");
+                    System.out.println("|Barbeiro| - " + this.getName() + " - durmindo");
                     vagas.wait();
                 }
                 catch (InterruptedException e) {

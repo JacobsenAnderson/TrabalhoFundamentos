@@ -21,9 +21,11 @@ public class Cliente extends Thread {
     public void entrar() {
         synchronized (cliente){
             if(cliente.getEsperaLotado()){
-                System.out.println("|Cliente| - " + this.getName() + "\t - Não há  vagas");
+                System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras
+                System.out.println("|Cliente| - " + this.getName() + " - Não há  vagas");
             }else{
                 int valor = (int)(Math.random() * 1000);
+                System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras
                 this.cliente.setAddEspera(valor);
                 System.out.println("|Cliente| - " + this.getName() +valor + " na fila de espera");
                 cliente.notifyAll();
