@@ -22,7 +22,7 @@ public class Cliente extends Thread {
         synchronized (cliente){
             if(cliente.getEsperaLotado()){
                 System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras
-                System.out.println("|Cliente| - " + this.getName() + " - Não há vagas");
+                System.out.println("#Não há vagas");
             }else{
                 int valor = (int)(Math.random() * 1000);
                 System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras
@@ -38,7 +38,7 @@ public class Cliente extends Thread {
         while (true) {
             this.entrar();
             try{
-                Thread.sleep((int) (Math.random() * 500));
+                Thread.sleep((int) (Math.random() * 1000));
             }
             catch (InterruptedException e){
                 e.printStackTrace();

@@ -17,7 +17,7 @@ int qtdMax = 8;
         Barbeiro b1 = new Barbeiro(listaEspera, "Anderson");
         Barbeiro b2 = new Barbeiro(listaEspera, "Renan");
               
- 
+        
         b1.start(); //Inicio Thread
         b2.start();        
         c1.start();

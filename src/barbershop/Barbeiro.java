@@ -12,11 +12,18 @@ package barbershop;
 public class Barbeiro extends Thread { //Classe execução Barbeiro
     
     private Espera vagas; 
+    private String nome;
     
     public Barbeiro(Espera vaga, String nome) {
         super(nome);
         this.vagas = vaga;
+        this.nome = nome;
     }
+
+    public String getNome() {
+        return nome;
+    }
+    
     
     public void atender() {
          synchronized (vagas){
@@ -37,10 +44,11 @@ public class Barbeiro extends Thread { //Classe execução Barbeiro
     }
     
     public void run(){
+        System.out.println( this.nome + " abriu a barbearia");
         while(true){
             this.atender();
             try{
-                Thread.sleep((int) (Math.random() * 1000));
+                Thread.sleep((int) (Math.random() * 5000));
             }
             catch (InterruptedException e){
                 e.printStackTrace();
