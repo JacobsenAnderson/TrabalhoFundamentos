@@ -48,7 +48,7 @@ public class Barbeiro extends Thread { //Classe execução Barbeiro
         while(true){
             this.atender();
             try{
-                Thread.sleep((int) (Math.random() * 5000));
+                Thread.sleep((int) (Math.random() * 5000)); // tempo que o barbeira vai atender o cliente, quamto mais mais chance de não ter vaga
             }
             catch (InterruptedException e){
                 e.printStackTrace();
