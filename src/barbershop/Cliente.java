@@ -22,7 +22,7 @@ public class Cliente extends Thread {
         synchronized (cliente){
             if(cliente.getEsperaLotado()){
                 System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras
-                System.out.println("|Cliente| - " + this.getName() + " - Não há  vagas");
+                System.out.println("|Cliente| - " + this.getName() + " - Não há vagas");
             }else{
                 int valor = (int)(Math.random() * 1000);
                 System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras

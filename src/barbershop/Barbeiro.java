@@ -9,9 +9,9 @@ package barbershop;
  *
  * @author ajacobsen
  */
-public class Barbeiro extends Thread {
+public class Barbeiro extends Thread { //Classe execução Barbeiro
     
-    private Espera vagas;
+    private Espera vagas; 
     
     public Barbeiro(Espera vaga, String nome) {
         super(nome);

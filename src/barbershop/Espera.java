@@ -9,9 +9,9 @@ package barbershop;
  *
  * @author ajacobsen
  */
-public class Espera {
+public class Espera { //Classe que controle de vagas dos clientes
     
-    int qtdEspera = 8;
+    int qtdEspera = 8; //Quantidade de Cadeiras / vagas
     
     private int[] vagas = new int[qtdEspera];
     
@@ -21,7 +21,7 @@ public class Espera {
         }        
     }
     
-    public int getVagasLivres(){
+    public int getVagasLivres(){//controle de vagas para barbeiros
         int vaga = 0;
         for (int i = 0; i < qtdEspera; i++){
             if(vagas[i]>0){
@@ -33,7 +33,7 @@ public class Espera {
         return vaga;
     }
     
-    public int setAddEspera(int arg) {
+    public int setAddEspera(int arg) { // add cliente na vaga liberada
         int vaga=arg;
         for (int i = 0; i < qtdEspera; i++) {
             if(vagas[i]==0){
@@ -44,7 +44,7 @@ public class Espera {
         return vaga;
     }
     
-    public boolean getEsperaLotado() {
+    public boolean getEsperaLotado() {// controle de lotação para cliente
         boolean lotado=true;
         for (int i = 0; i < qtdEspera; i++) {
             if(vagas[i]==0){
@@ -54,7 +54,7 @@ public class Espera {
         }
         return lotado;
     }
-    public int getQtdEspera() {
+    public int getQtdEspera() { //controle de vagas utilizadas
         int qtd=0;
         for (int i = 0; i < qtdEspera; i++) {
             if(vagas[i]>0){

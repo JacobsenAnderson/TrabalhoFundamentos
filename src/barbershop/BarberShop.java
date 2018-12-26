@@ -13,12 +13,12 @@ public class BarberShop {
 int qtdMax = 8;
     public static void main(String[] args) {
         Espera listaEspera = new Espera();
-        Cliente c1 = new Cliente(listaEspera, "Cliente novo ");
+        Cliente c1 = new Cliente(listaEspera, "Cliente ");
         Barbeiro b1 = new Barbeiro(listaEspera, "Anderson");
         Barbeiro b2 = new Barbeiro(listaEspera, "Renan");
               
  
-        b1.start();
+        b1.start(); //Inicio Thread
         b2.start();        
         c1.start();
            
