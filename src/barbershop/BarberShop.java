@@ -13,7 +13,7 @@ public class BarberShop {
 int qtdMax = 8;
     public static void main(String[] args) {
         Espera listaEspera = new Espera();
-        Cliente c1 = new Cliente(listaEspera, "Cliente novo");//vou tentar incluir o nome ou numero do Cliente!
+        Cliente c1 = new Cliente(listaEspera, "Cliente novo ");
         Barbeiro b1 = new Barbeiro(listaEspera, "Anderson");
         Barbeiro b2 = new Barbeiro(listaEspera, "Renan");
                 

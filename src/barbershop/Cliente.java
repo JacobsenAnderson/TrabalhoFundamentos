@@ -11,6 +11,7 @@ package barbershop;
  */
 public class Cliente extends Thread {
     private Espera cliente;
+    private int num;
     public Cliente() { }
     public Cliente (Espera vaga, String nome){
         super(nome);
@@ -24,11 +25,11 @@ public class Cliente extends Thread {
             }else{
                 int valor = (int)(Math.random() * 1000);
                 this.cliente.setAddEspera(valor);
-                System.out.println("|Cliente| - " + this.getName() + "\t - Novo Cliente na fila de espera");
-                this.getName();
+                System.out.println("|Cliente| - " + this.getName() +valor + " na fila de espera");
                 cliente.notifyAll();
             }
         }
+        
     }
     
     public void run() {
@@ -42,6 +43,5 @@ public class Cliente extends Thread {
             }
         }
     }
-    
     
 }
