@@ -25,6 +25,7 @@ public class Cliente extends Thread {
                 int valor = (int)(Math.random() * 1000);
                 this.cliente.setAddEspera(valor);
                 System.out.println("|Cliente| - " + this.getName() + "\t - Novo Cliente na fila de espera");
+                this.getName();
                 cliente.notifyAll();
             }
         }
