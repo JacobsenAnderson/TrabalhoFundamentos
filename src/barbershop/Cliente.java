@@ -13,6 +13,7 @@ public class Cliente extends Thread {
     private Espera cliente;
     private int num;
     public Cliente() { }
+    
     public Cliente (Espera vaga, String nome){
         super(nome);
         this.cliente = vaga;
@@ -27,7 +28,7 @@ public class Cliente extends Thread {
                 int valor = (int)(Math.random() * 1000);
                 System.out.println("#Cadeiras Vagas: "+(cliente.qtdEspera - cliente.getQtdEspera()) ); //Listar quantidade de cadeiras
                 this.cliente.setAddEspera(valor);
-                System.out.println("|Cliente| - " + this.getName() + valor + " na fila de espera");
+                System.out.println("|Cliente| - " + this.getName() + valor + " sentou na fila de espera");
                 cliente.notifyAll();
             }
         }

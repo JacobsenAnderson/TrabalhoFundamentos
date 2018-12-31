@@ -10,7 +10,7 @@ package barbershop;
  * @author ajacobsen
  */
 public class BarberShop {
-int qtdMax = 8;
+
     public static void main(String[] args) {
         Espera listaEspera = new Espera();
         Cliente c1 = new Cliente(listaEspera, "Cliente ");
