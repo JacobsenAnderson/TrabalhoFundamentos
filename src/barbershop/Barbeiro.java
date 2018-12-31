@@ -44,11 +44,11 @@ public class Barbeiro extends Thread { //Classe execução Barbeiro
     }
     
     public void run(){
-        System.out.println( this.nome + " abriu a barbearia");
+        //System.out.println( this.nome + " abriu a barbearia");
         while(true){
             this.atender();
             try{
-                Thread.sleep((int) (Math.random() * 5000)); // tempo que o barbeira vai atender o cliente, quamto mais mais chance de não ter vaga
+                Thread.sleep((int) (Math.random() * 5000)); // tempo que o barbeira vai atender o cliente, quanto mais mais chance de não ter vaga
             }
             catch (InterruptedException e){
                 e.printStackTrace();
